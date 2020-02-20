@@ -65,8 +65,7 @@ namespace DinosaurTracker
       var moveIndex = Dinosaurs.IndexOf(Dinosaurs.First(name => Dinosaurs.Contains(name)));
       Console.WriteLine($"Please enter an enclosure number");
       var newPen = int.Parse(Console.ReadLine());
-      Dinosaurs[moveIndex].Pen = newPen;
-
+      Dinosaurs.First(name => Dinosaurs.Contains(name)).Pen = newPen;
 
     }
 
