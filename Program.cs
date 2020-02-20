@@ -13,7 +13,7 @@ namespace JurassicPark
       while (isRunning)
       {
         Console.WriteLine("What would you like to do?");
-        Console.WriteLine("(ADD), (VIEW), (REMOVE), (Transfer) to new pen, or (QUIT)");
+        Console.WriteLine("(ADD), (VIEW), (REMOVE), (TRANSFER) to new pen, or (QUIT)");
         var input = Console.ReadLine().ToLower();
         if (input == "add")
         {
@@ -21,6 +21,11 @@ namespace JurassicPark
           var what = Console.ReadLine().ToLower();
           Console.WriteLine("What is the diet type? (HERBIVORE) or (CARNIVORE)");
           var diet = Console.ReadLine().ToLower();
+          if (diet != "carnivore" && diet != "herbivore")
+          {
+            Console.WriteLine("That is not a valid choice, chose again from herbivore or carnivore.");
+            diet = Console.ReadLine().ToLower();
+          }
           Console.WriteLine("What is the weight in pounds?");
           var weight = int.Parse(Console.ReadLine());
           Console.WriteLine("What pen number is the dinosaur in?");
