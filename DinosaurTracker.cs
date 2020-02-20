@@ -62,7 +62,7 @@ namespace DinosaurTracker
     }
     public void TransferDinosaur(string name)
     {
-      var moveIndex = Dinosaurs.IndexOf(Dinosaurs.First(name => Dinosaurs.Contains(name)));
+      // var moveIndex = Dinosaurs.IndexOf(Dinosaurs.First(name => Dinosaurs.Contains(name)));
       Console.WriteLine($"Please enter an enclosure number");
       var newPen = int.Parse(Console.ReadLine());
       Dinosaurs.First(name => Dinosaurs.Contains(name)).Pen = newPen;
@@ -73,7 +73,7 @@ namespace DinosaurTracker
     {
       var herbivore = Dinosaurs.Count(displayDietH => displayDietH.DietType == "herbivore");
       var carnivore = Dinosaurs.Count(displayDietC => displayDietC.DietType == "carnivore");
-      Console.WriteLine($"There are {herbivore} herbivores and {carnivore} carnivores.");
+      Console.WriteLine($"There are {herbivore} herbivore(s) and {carnivore} carnivore(s).");
 
     }
   }
